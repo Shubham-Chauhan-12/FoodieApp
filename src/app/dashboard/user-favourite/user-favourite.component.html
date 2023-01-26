@@ -1,0 +1,115 @@
+<div class="container">
+    <mat-card>
+        <mat-tab-group>
+            <mat-tab label="FAVOURITE RESTAURANT">
+
+                <div class="container" id="fle">
+                    <div class="card" *ngFor="let restaurant of favRes">
+                        <div class="card-body">
+                            <div class="top">
+                                <img [src]="'data:image/jpeg;base64,' + restaurant.restaurantImage.image" alt="">
+
+                                <h2 class="card-title">{{restaurant.restaurantName}}</h2>
+                                <!-- <p class="card-text">{{restaurant.description}}</p> -->
+
+                                <button mat-icon-button 
+                                    (click)="removeFavRestaurant(restaurant.restaurantName)">
+                                    <mat-icon>
+                                        delete
+                                    </mat-icon>
+                                </button>
+                                
+                            </div>
+                            <div class="bottom">
+                                <h5 class="card-subtitle text-muted"><i class="fa-solid fa-location-pin"></i>
+                                    {{restaurant.city}} </h5>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </mat-tab>
+            <mat-tab label="FAVOURITE DISH">
+
+                <div class="container" id="fle">
+                    <div class="card" *ngFor="let dish of favDish">
+                        <div class="card-body">
+                            <div class="top">
+                                <img src="../../../../assets/imgs/{{dish.itemName}}.jpg" alt="">
+
+                                <h2 class="card-title">{{dish.itemName}}</h2>
+                                <!-- <p class="card-text">{{restaurant.description}}</p> -->
+
+                                <button mat-icon-button color="basic" (click)="removeFavDish(dish.itemName)">
+                                    <mat-icon>
+                                        delete
+                                    </mat-icon>
+                              
+                                </button>
+                               
+                            </div>
+                            <div class="bottom">
+                                <h5 class="card-subtitle text-muted"><i class="fa fa-inr" aria-hidden="true"></i>
+                                    {{dish.itemPrice}} </h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </mat-tab>
+
+        </mat-tab-group>
+    </mat-card>
+</div>
+
+
+
+
+
+
+
+
+<!-- <div class="row">
+    <div class="col-sm-6">
+        <div class="card" *ngFor="let restaurant of favRes">
+            <div class="card-body">
+                <div class="partion">
+                    <img [src]="'data:image/jpeg;base64,' + restaurant.restaurantImage.image" alt="">
+                </div>
+                <div class="partion">
+                    <h2 class="card-title">{{restaurant.restaurantName}}</h2>
+                    <h3 class="card-subtitle text-muted">{{restaurant.city}}</h3>
+
+                    <p class="card-text">{{restaurant.description}}</p>
+                </div>
+                <div class="partion">
+                    <button mat-icon-button (click)="removeFavRestaurant(restaurant.restaurantName)">
+                        <mat-icon>delete</mat-icon>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6">
+        <div class="card" *ngFor="let dish of favDish">
+            <div class="card-body">
+                <div class="img">
+                    <img src="../../../../assets/imgs/{{dish.itemName}}.jpg" alt="">
+                </div>
+                <div class="partion">
+                    <h2 class="card-title">{{dish.itemName}}</h2>
+
+                    <p class="card-text">Price : {{dish.itemPrice}}</p>
+                </div>
+                <div class="partion">
+                    <button mat-icon-button (click)="removeFavDish(dish.itemName)">
+                        <mat-icon>delete</mat-icon>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->

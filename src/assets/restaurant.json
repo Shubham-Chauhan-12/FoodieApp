@@ -1,0 +1,24 @@
+{
+  "restaurant": [
+    {
+      "id": 1,
+      "restaurantName": "Taj",
+      "url": "breakfast",
+      "city": "Hyderabad",
+      "menuList": [
+        {
+          "itemName": "pasta",
+          "itemPrice": 790
+        },
+        {
+          "itemName": "biryani",
+          "itemPrice": 500.34
+        },
+        {
+          "itemName": "tangdi kabab",
+          "itemPrice": 400.9
+        }
+      ]
+    }
+  ]
+}
